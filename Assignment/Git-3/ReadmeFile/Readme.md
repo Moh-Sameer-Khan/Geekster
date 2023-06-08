@@ -1,5 +1,5 @@
 
-# <h3 style="text-align: center;"> **Welcome to README-FILE 👋** </h3>
+## **Welcome to README-FILE 👋**
 ___
 ___
 
