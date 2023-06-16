@@ -69,8 +69,8 @@ public class Main {
 
                 System.out.println("Below showing whole code of API in JSON Form....👇");
                 System.out.println();
-                System.out.println(jsonAPIResponse);
-
+                System.out.println(jsonAPIResponse.toString());
+gits 
                 System.out.println();
                 System.out.println();
 
