@@ -13,7 +13,6 @@ import java.net.URL;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Fetching-Zippopotamus-API Data Using JAVA Code are showing Below....👇");
 
         String urlString = "https://api.zippopotam.us/us/33162";
 
@@ -67,24 +66,21 @@ public class Main {
             JSONObject jsonAPIResponse = new JSONObject(apiData.toString());
 
             try {
+
+                System.out.println("Below showing whole code of API in JSON Form....👇");
+                System.out.println();
+                System.out.println(jsonAPIResponse);
+
+                System.out.println();
+                System.out.println();
+
+                System.out.println("Fetching-Zippopotamus-API Data Using JAVA Code are showing Below....👇");
                 System.out.println();
                 System.out.println(jsonAPIResponse.get("post code"));
                 System.out.println(jsonAPIResponse.get("country"));
                 System.out.println(jsonAPIResponse.get("country abbreviation"));
                 System.out.println(jsonAPIResponse.get("places"));
 
-//                System.out.println(jsonAPIResponse.get("country"));
-//                System.out.println(jsonAPIResponse.get("country"));
-//                System.out.println(jsonAPIResponse.get("country"));
-//                System.out.println(jsonAPIResponse.get("country"));
-//                System.out.println(jsonAPIResponse.get("country"));
-
-                System.out.println();
-                System.out.println();
-
-                System.out.println("Below showing whole code of API in String Form....👇");
-//                System.out.println(jsonAPIResponse.getJSONObject("places").get("longitude"));
-                System.out.println(jsonAPIResponse.toString());
             } catch (Exception e) {
                 System.out.println("You pass wrong Parameter .. Please check it");
             }
