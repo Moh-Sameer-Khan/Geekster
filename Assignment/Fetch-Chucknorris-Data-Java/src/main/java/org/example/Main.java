@@ -14,6 +14,7 @@ import java.net.URLConnection;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+//        This Is Fetching api Code by Java
         System.out.println("Fetching-Chucknorris-Jokes-Api Data Using JAVA Code are showing Given Below ..... ");
 //        bcz we are using anywhere on other places but these properties was inside try catch so we use like this -- > who we can access anywhere
         URL url = null;  // error coming so we pass null // error In Connection
