@@ -8,6 +8,10 @@
     <artifactId>Fetch-Chucknorris-Data-Java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--    First we add two dependencies for this project/ fetching data from my code-->
+    <!--    1. API data comes in JSON form so add that depenedency-->
+    <!--    2. we need a http so we add its parent dependency spring-boot-starter-web-->
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.json/json -->
         <dependency>
