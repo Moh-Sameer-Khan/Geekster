@@ -1,9 +1,8 @@
 package com.geekster.CreatingObjectsMailIntegration;
 
 import com.geekster.CreatingObjectsMailIntegration.MyObjects.Employee;
-import com.geekster.CreatingObjectsMailIntegration.MyObjects.MyObjects;
+import com.geekster.CreatingObjectsMailIntegration.MyObjects.MyObject;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 // @configuratin using for controlling to making an objects from spring to in my our hands and create our choices objects
 //@Configuration
@@ -26,9 +25,9 @@ public class ConfigurationAnnotation {
 
     //    for getting via Email to send message
     @Bean
-    public MyObjects myObjects() {
+    public MyObject myObj() {
         String name = "Sameer Khan";
         int sellary = 400000;
-        return new MyObjects(name, sellary);
+        return new MyObject(name, sellary);
     }
 }
