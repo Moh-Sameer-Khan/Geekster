@@ -5,7 +5,7 @@ ___
 
 
 
-> *Below, I'm showing the details related to my Employee-Address project like Framework & Language used, Data flow(function used), Data Structure used in my Project and Summary.*
+> *Below, I'm showing the details related to my E-Commerce API project like Framework & Language used, Data flow(function used), Data Structure used in my Project and Summary.*
 
 -  ## [**Framework and Language Used :**](#heading-ids) ##
 ___
@@ -15,27 +15,27 @@ ___
 
 ## [**Data Flow**](#heading-ids) ##
 ___
-- ## 1. **Controller (Employee & Address):-** ##
-> - **@GetMapping :-**  *getAllEmployees(), getEmpById(), getAllAddresses(), getAddressById()*
-> - **@PostMapping :-** *addEmployees(),addAddress()*
-> - **@PutMapping :-** *updateEmpFirstNameById(), updateAddressCityById()*
-> - **@DeleteMapping :-** *deleteEmpById(), deleteAddressByIdAndState()*
-> - **[Others Annotaion Used :-](#heading-ids)** *@RestController,@Autowired, @PathVariable, @RequestBody, @RequestParam, @RequestMapping*
+- ## 1. **Controller (Order, Address, Product & User):-** ##
+> - **@GetMapping :-**  *getAllProductsByCategory(), getOrderById(), getUserById(), getAddressById()*
+> - **@PostMapping :-** *addAddress(),addUsers(), addOrders(), addProducts()*
+> - **@PutMapping :-** *I'm Using Cascading so there is update internally*
+> - **@DeleteMapping :-** *deleteById()*
+> - **[Others Annotaion Used :-](#heading-ids)** *@RestController,@Autowired, @PathVariable, @RequestBody, @RequestParam, @RequestMapping,*
 
-- ## 2. **Services (Employee & Address):-** ##
-> - **Method Used :-**  *addEmployees(),getAllEmployees(), updateEmpFirstNameById(), findAll(), findAll(), findById(), get(), updateEmpFirstNameById(), save(), deleteEmpById(), deleteById(), updateEmpFirstNameById()*
+- ## 2. **Services (Order, Address, Product & User):-** ##
+> - **Method Used :-**  *addUsers(),getUserById(), addProducts(), findAll(), getAllProductsByCategory(), removeById(), name(), addOrders(), save(), getOrderById(), addAddress(),*
 > - **[Others Annotaion Used :-](#heading-ids)** *@Service, @Autowired, @Transactional*
 
-- ## 3. **Repository (Employee & Address) :-** ##
-> - **Method Used :-**  *extends the CrudRepository(T, ID), updateEmpFirstNameById(), updateAddressCityById(), deleteAddressByIdAndState()*
+- ## 3. **Repository (Order, Address, Product & User) :-** ##
+> - **Method Used :-**  *extends the CrudRepository(T, ID), findByUserId(), getAllProductsByCategory(), removeById(), getOrderById()*
 > - **[Others Annotaion Used :-](#heading-ids)** *@Repository, @Autowired, @Modifying, @Query*
 
 - ## 4. **DataBase Design:-** ##
 > - **Database Used :-**  *SQL/Hibernate Database using*
 
 
-- ## 5. **Model / Entity:-** ##
-> - **Annotation Used :-**  *@Data, @NoArgsConstructor, @AllArgsConstructor, @Id, @OneToOne, @Column, @JoinColumn, @Entity, @GeneratedValue*
+- ## 5. **Model / Entity(Order, Address, Product & User):-** ##
+> - **Annotation Used :-**  *@Data, @NoArgsConstructor, @AllArgsConstructor, @Id, @OneToOne, @Column, @JoinColumn, @Entity, @GeneratedValue, @JoinTable, @ManyToMany, @ManyToOne, @OneToMany with Cascading, @Enumerated, @NotNull, @Email, @Pattern*
 
 ## [**Data Structure used in my Project**](#heading-ids) ##
 ____
@@ -43,7 +43,7 @@ ____
 
 ## [**Project Summary**](#heading-ids) ##
 ____
-> - **[Aim :-](#heading-ids)** *This is basically good project for learning purpose springBoot basics, Annotation, API, spring mvc and CRUD Operation, crud Repository inbuilt method, and Custom Finder and Custom Query. In this project i just add Employye, add Address, get Employee, remove Employee By Id, update EmployeeInformation, get Address by id , Address by id, Address delete, Address add, Address update by ID and State, a lot of things i learned from this project.*
+> - **[Aim :-](#heading-ids)** *This is basically good project for learning purpose springBoot basics,Mapping, Annotation, API, spring mvc and CRUD Operation, crud Repository inbuilt method, and Custom Finder and Custom Query. In this project i just add Users, add Address, get Users, remove users By Id, update product, get Address by id , Address by id, Address delete, Address add, Address update by ID and State, a lot of things i learned from this project.*
 
 ## **[👨‍💻 Sameer](#heading-ids)** ##
 ____
@@ -70,7 +70,7 @@ Give a ⭐if this project helped you!
 ___
 Copyright © 2023 [Moh Sameer Khan](#heading-ids).
 
-This project is [Employee-Address](https://choosealicense.com/licenses/mit/) licensed.
+This project is [E-Commerce-API](https://choosealicense.com/licenses/mit/) licensed.
 
 ___
 *This README was generated with* 🧡 *by [readme-md-generator](https://www.makeareadme.com/)*

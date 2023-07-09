@@ -1,0 +1,228 @@
+Step By Step do it --
+
+
+User **********************************************User
+########################### Step -- 1 -->By this Two row / data will be add in user Table
+{
+  "userName": "same123",
+  "userEmail": "same@gmail.com",
+  "userPassword": "same@123",
+  "userContactNumber": "+918057767789"
+}
+And
+{
+  "userName": "khan123",
+  "userEmail": "khan@gmail.com",
+  "userPassword": "khan@123",
+  "userContactNumber": "+918157767789"
+}
+
+Product *******************************************Product
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Step -- 2 --> By this Two row / data will be add in product Table
+{
+  "productName": "Chicken Butter",
+  "productPrice": 300,
+  "productDescription": "Delicious Food spicy",
+  "productCategory": "FMCG",
+  "productBrand": "CHICKEN"
+}
+And
+{
+  "productName": "Airphone Samsung",
+  "productPrice": 250,
+  "productDescription": "nice airphone and good quality",
+  "productCategory": "ELECTRONICS",
+  "productBrand": "JBL"
+}
+
+
+Address******************************************************* Address 
+################################## Step -- 3 --> It will add one data/row in address table and inside data will be update in user table
+{
+  "addressId" : 1,
+  "addressName": "Noida",
+  "addressLandmark": "landmark-1",
+  "addressContactNumber": "contact-1",
+  "addressZipcode": "zip-Code-1",
+  "addressState": "UP",
+  "user": {
+    "userId": 1,
+    "userName": "same1234",
+    "userEmail": "same1234@gmail.com",
+    "userPassword": "same@1234",
+    "userContactNumber": "8057776756"
+  }
+}
+
+################################ Step -- 4 --> It will add one data in address table but foreign key will be null but in next step -- 5 we will handle that
+{
+  "addressName": "Trivendrum",
+  "addressLandmark": "Trivand-landmark",
+  "addressContactNumber": "TriContact",
+  "addressZipcode": "Trivendrum-zip-Code",
+  "addressState": "Kerala"
+}
+
+################################# Step -- 5 --> 
+@@@@@@@@@@@@@@@@@@@ -- Step-- 5.1 -->Error(Detatched entity passed) --> if we will pass address id then it will not fail
+{
+
+  "addressName": "Noida",
+  "addressLandmark": "landmark-1",
+  "addressContactNumber": "contact-1",
+  "addressZipcode": "zip-Code-1",
+  "addressState": "UP",
+  "user": {
+    "userId": 2,
+    "userName": "same12345",
+    "userEmail": "same12345@gmail.com",
+    "userPassword": "same@12345",
+    "userContactNumber": "9900776756"
+  }
+}
+
+@@@@@@@@@@@@@@@----Step-- 5.2 --> Error(duplicate entry <id name>) Will Come Bcz Here is One to one mappping so we can not refer 1 user to another address id 
+{
+  "addressId" : 2,
+  "addressName": "Noida",
+  "addressLandmark": "landmark-1",
+  "addressContactNumber": "contact-1",
+  "addressZipcode": "zip-Code-1",
+  "addressState": "UP",
+  "user": {
+    "userId": 1,  // bcz it's already mapped from another address id
+    "userName": "same12345",
+    "userEmail": "same12345@gmail.com",
+    "userPassword": "same@12345",
+    "userContactNumber": "9900776756"
+  }
+}
+
+@@@@@@@@@@@@@ --Step -- 5.3 --> It will work and warning--. here if address id exist then it will update otherwise it add new row And for user id if match then it will update all data in user table and fk will be update in address table otherwise if not find then error(Intenal Error)
+{
+  "addressId" : 2,
+  "addressName": "Noida",
+  "addressLandmark": "landmark-1",
+  "addressContactNumber": "contact-1",
+  "addressZipcode": "zip-Code-1",
+  "addressState": "UP",
+  "user": {
+    "userId": 2,
+    "userName": "same12345",
+    "userEmail": "same12345@gmail.com",
+    "userPassword": "same@12345",
+    "userContactNumber": "9900776756"
+  }
+}
+
+@@@@@@@@@@@@@ Step--- 5.4 --> It will work and it will add one row/data in address table and same like add one row inside json user table
+
+{
+  "addressName": "Kanpur",
+  "addressLandmark": "kanpur-landmark",
+  "addressContactNumber": "kanpur contact-1",
+  "addressZipcode": "kanpur-zip-Code-1",
+  "addressState": "Uttar Pradesh",
+  "user": {
+    "userName": "Sohan123",
+    "userEmail": "sohan123@gmail.com",
+    "userPassword": "sohan@123",
+    "userContactNumber": "7890776756"
+  }
+}
+
+
+Order***********************************************************************Order --Table*******************
+@@@@@@@@@@@@@@@ Step--6.1 --> it will work completely fine -->Here I'm not passing any id of anyone table only withot id I'm passing and It's create / add one data in every table who adding all FK in this table
+
+{
+  "user": {
+    "userName": "sahil123",
+    "userEmail": "sahil123@gmail.com",
+    "userPassword": "sahil@123",
+    "userContactNumber": "600000000"
+  },
+  "products": [
+    {
+      "productName": "Asus laptop",
+      "productPrice": 50000,
+      "productDescription": "Best of one laptop",
+      "productCategory": "ELECTRONICS",
+      "productBrand": "JBL"
+    }
+  ],
+  "address": {
+    "addressName": "Chennai",
+    "addressLandmark": "Chennai-Landmark",
+    "addressContactNumber": "Chennai-ContactNO",
+    "addressZipcode": "Chennai-Zipcode",
+    "addressState": "Tamilnadu",
+    "user": {
+      "userName": "Khan123",
+      "userEmail": "khan@gmail.com",
+      "userPassword": "khan@123",
+      "userContactNumber": "7000000000"
+    }
+  },
+  "productQuantity": 5
+}
+
+@@@@@@@@@@@@@@@@@@@@ Step--6.2 --> Completely work and By Cascading, It's update inside data who present in the order table and update everything 
+
+{
+   "orderId": 1,
+  "user": {
+    "userId" : 7,
+    "userName": "sahil1234",
+    "userEmail": "sahil1234@gmail.com",
+    "userPassword": "sahil@1234",
+    "userContactNumber": "610000000"
+  },
+  "products": [
+    {
+      "productId" : 3,
+      "productName": "Asus laptop VivoBook",
+      "productPrice": 50000,
+      "productDescription": "Best of one laptop in the market",
+      "productCategory": "ELECTRONICS",
+      "productBrand": "JBL"
+    }
+  ],
+  "address": {
+    "addressId" : 9,
+    "addressName": "Chennai (Chepauk)",
+    "addressLandmark": "Chennai-Landmark-1",
+    "addressContactNumber": "Chennai-ContactNO-1",
+    "addressZipcode": "Chennai-Zipcode-1",
+    "addressState": "Tamilnadu",
+    "user": {
+      "userId": 6, 
+      "userName": "Khan1234",
+      "userEmail": "khan1234@gmail.com",
+      "userPassword": "khan@1234",
+      "userContactNumber": "7100000000"
+    }
+  },
+  "productQuantity": 6
+}
+
+
+######################################## Get Order BY Id --CQ(cutom Query) i used --###############
+@@@@@@@@@@@@@@@@@@@ Step -- 7.1 -- if i will pass exist Order_id then it will return whole data of that table and inside FK(foreign key) data aslo so carefully see 
+@@@@@@@@@@@@@@@@@@@ Step -- 7.2 --> if i will pass that orderId who does not exist then it will return null or nothing
+
+######################################## Get User BY Id --CF(cutom Finder) i used --###############
+@@@@@@@@@@@@@@@@@@@ Step -- 8.1 -- if i will pass exist user_id then it will return whole data of that userID 
+@@@@@@@@@@@@@@@@@@@ Step -- 8.2 --> if i will pass that userId who does not exist then it will return null or nothing
+
+######################################## Get All Products By Category --CQ(cutom Query) i used --###############
+@@@@@@@@@@@@@@@@@@@ Step -- 9.1 -- if i will pass exist product_Category then it will return All/whole List of that category 
+@@@@@@@@@@@@@@@@@@@ Step -- 9.2 --> if i will pass that product_Category who does not exist then it will give error bcz we are using enum for category so that must be if that category is not available then it will give nothing
+
+####################################### Delete All Products By Id --> Custom Query(CQ) i used ###############################
+@@@@@@@@@@@@@@@@@@@ Step -- 10.1 -- if i will pass exist product_id and who have not FK(Foreign key) other table then it will delete that product
+@@@@@@@@@@@@@@@@@@@ Step -- 10.2 --> if i will pass that product_id who does not exist then it will not be delete 
+@@@@@@@@@@@@@@@@@@@ Step -- 10.1 -- Error(Fk Violation) --> if i will pass exist product_id and who have FK(Foreign key) other table then Error will come 
+
+
+It's enoguh for today later works thanks!!!

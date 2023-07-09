@@ -1,9 +1,6 @@
 package com.geekster.EcommerceAPI.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,9 +14,16 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer productId;
+
     private String productName;
+
     private Integer productPrice;
+
     private String productDescription;
+
+    @Enumerated(EnumType.STRING)
     private Category productCategory;
+
+    @Enumerated(EnumType.STRING)
     private Brand productBrand;
 }
