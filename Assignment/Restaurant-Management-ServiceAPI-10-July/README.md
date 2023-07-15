@@ -5,7 +5,7 @@ ___
 
 
 
-> *Below, I'm showing the details related to my Employee-Address project like Framework & Language used, Data flow(function used), Data Structure used in my Project and Summary.*
+> *Below, I'm showing the details related to my Restaurant-Management-Service-SIGN-IN and SIGN-UP like Framework & Language used, Data flow(function used), Data Structure used in my Project and Summary.*
 
 -  ## [**Framework and Language Used :**](#heading-ids) ##
 ___
@@ -15,27 +15,29 @@ ___
 
 ## [**Data Flow**](#heading-ids) ##
 ___
-- ## 1. **Controller (Employee & Address):-** ##
-> - **@GetMapping :-**  *getAllEmployees(), getEmpById(), getAllAddresses(), getAddressById()*
-> - **@PostMapping :-** *addEmployees(),addAddress()*
-> - **@PutMapping :-** *updateEmpFirstNameById(), updateAddressCityById()*
-> - **@DeleteMapping :-** *deleteEmpById(), deleteAddressByIdAndState()*
-> - **[Others Annotaion Used :-](#heading-ids)** *@RestController,@Autowired, @PathVariable, @RequestBody, @RequestParam, @RequestMapping*
+- ## 1. **Controller (Admin, Order, User, FoodItem & AuthenticationToken):-** ##
+> - **@GetMapping :-**  *getAllUsers()*
+> - **@PostMapping :-** *signUpUser(),signInUser(), addOrder(), addOrders(), addFoodItems(), sigInAdmin(), signUpAdmin()*
+> - **@PutMapping :-** *Not used*
+> - **@DeleteMapping :-** *signOutUser(), signOutAdmin()*
+> - **[Others Annotaion Used :-](#heading-ids)** *@RestController,@Autowired, @PathVariable, @RequestBody, @RequestParam, @RequestMapping, @Validated, @Valid*
 
-- ## 2. **Services (Employee & Address):-** ##
-> - **Method Used :-**  *addEmployees(),getAllEmployees(), updateEmpFirstNameById(), findAll(), findAll(), findById(), get(), updateEmpFirstNameById(), save(), deleteEmpById(), deleteById(), updateEmpFirstNameById()*
+- ## 2. **Services (Admin, Order, User, FoodItem & AuthenticationToken):-** ##
+> - **Method Used :-**  *signUpUser(),findFirstByUserEmail(), encryptPassword(), signInUser(), findAll(), getAllUsers(), sendEmail(), delete(), save(), signOutUser(), addOrder(), existsById(), saveOrder(), addFoodItems(), authenticate(), findFirstByTokenValue(), equals(), sigInAdmin(), signUpAdmin()*
 > - **[Others Annotaion Used :-](#heading-ids)** *@Service, @Autowired, @Transactional*
+> - **[Others Class Used :-](#heading-ids)** *EmailHandler, PasswordEncrypter*
 
-- ## 3. **Repository (Employee & Address) :-** ##
-> - **Method Used :-**  *extends the CrudRepository(T, ID), updateEmpFirstNameById(), updateAddressCityById(), deleteAddressByIdAndState()*
-> - **[Others Annotaion Used :-](#heading-ids)** *@Repository, @Autowired, @Modifying, @Query*
+- ## 3. **Repository (Admin, Order, User, FoodItem & AuthenticationToken) :-** ##
+> - **Method Used :-**  *extends the CrudRepository(T, ID), findFirstByUserEmail(), findFirstByTokenValue(), findFirstByUserAuthToken(), findFirstByAdminEmail()*
+> - **[Others Annotaion Used :-](#heading-ids)** *@Repository, @Autowired*
 
 - ## 4. **DataBase Design:-** ##
 > - **Database Used :-**  *SQL/Hibernate Database using*
 
 
-- ## 5. **Model / Entity:-** ##
-> - **Annotation Used :-**  *@Data, @NoArgsConstructor, @AllArgsConstructor, @Id, @OneToOne, @Column, @JoinColumn, @Entity, @GeneratedValue*
+- ## 5. **Model / Entity(Admin, Order, User, FoodItem & AuthenticationToken):-** ##
+> - **Annotation Used :-**  *@Data, @NoArgsConstructor, @AllArgsConstructor, @Id, @OneToOne, @Column, @JoinColumn, @Entity, @GeneratedValue, @NotNull, @NotBlank, @ManyToOne, @OneToMany, @ManyToMany, @JoinTable, @Enumerated, @Pattern, @JsonIdentityInfo, @Min, @Max, @Table, @Size, @DecimalMin*
+> - **[Others Class Used :-](#heading-ids)** *SignIbInput, SignUpOutput*
 
 ## [**Data Structure used in my Project**](#heading-ids) ##
 ____
@@ -43,7 +45,7 @@ ____
 
 ## [**Project Summary**](#heading-ids) ##
 ____
-> - **[Aim :-](#heading-ids)** *This is basically good project for learning purpose springBoot basics, Annotation, API, spring mvc and CRUD Operation, crud Repository inbuilt method, and Custom Finder and Custom Query. In this project i just add Employye, add Address, get Employee, remove Employee By Id, update EmployeeInformation, get Address by id , Address by id, Address delete, Address add, Address update by ID and State, a lot of things i learned from this project.*
+> - **[Aim :-](#heading-ids)** *This is basically good project for learning purpose springBoot basics, Mapping, sign-in, sign-up, sign-out, Annotation, API, spring mvc and CRUD Operation, crud Repository inbuilt method, and Custom Finder and Custom Query. In this project i just add Admin, add Order, get Admin, remove Order, get Users, a lot of things i learned from this project.*
 
 ## **[👨‍💻 Sameer](#heading-ids)** ##
 ____
@@ -70,7 +72,7 @@ Give a ⭐if this project helped you!
 ___
 Copyright © 2023 [Moh Sameer Khan](#heading-ids).
 
-This project is [Employee-Address](https://choosealicense.com/licenses/mit/) licensed.
+This project is [Restaurant-Management-Service-API(SIGN-IN, SIGN-UP, SIGN-OUT)](https://choosealicense.com/licenses/mit/) licensed.
 
 ___
 *This README was generated with* 🧡 *by [readme-md-generator](https://www.makeareadme.com/)*

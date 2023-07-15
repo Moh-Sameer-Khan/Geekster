@@ -1,6 +1,7 @@
 package com.geekster.Restaurant._Management_Service_API.service;
 
 import com.geekster.Restaurant._Management_Service_API.model.AuthenticationToken;
+import com.geekster.Restaurant._Management_Service_API.model.Order;
 import com.geekster.Restaurant._Management_Service_API.model.User;
 import com.geekster.Restaurant._Management_Service_API.model.dto.SignInInput;
 import com.geekster.Restaurant._Management_Service_API.model.dto.SignUpOutput;
@@ -20,6 +21,9 @@ public class UserService {
 
     @Autowired
     IAuthRepo iAuthRepo;
+
+    @Autowired
+    OrderService orderService;
 
     public SignUpOutput signUpUser(User user) {
 
@@ -102,5 +106,23 @@ public class UserService {
 
     public List<User> getAllUsers() {
         return iUserRepo.findAll();
+    }
+
+    public String signOutUser(String email) {
+        User user = iUserRepo.findFirstByUserEmail(email);
+        iAuthRepo.delete(iAuthRepo.findFirstByUserAuthToken(user));
+        return "User Signed Out Successfully!!!";
+    }
+
+    public boolean addOrder(Order order) {
+//        id of user
+        Long userId = order.getUser().getUserId();
+        boolean isUserValid = iUserRepo.existsById(userId);
+        if(isUserValid) {
+            orderService.saveOrder(order);
+            return true;
+        }else {
+            return false;
+        }
     }
 }

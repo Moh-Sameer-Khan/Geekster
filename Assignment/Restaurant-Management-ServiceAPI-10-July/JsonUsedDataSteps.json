@@ -14,3 +14,19 @@
   "email": "sameer@gmail.com",
   "password": "Sameer@123"
 }
+
+//  ##########################  Step -- 3 --SIGN-OUT --USer class --> delete row in token class
+// Pass email exist and token value
+
+
+//  ##########################  Step -- 3 --Order Book --USer class -->add one row in order class
+// test on it --> invalid user id, wrong email, and wrong token etc
+// pass email and token value
+{
+  "orderQuantity": 1,
+  "user": {
+    "userId": 1
+  },
+  "status": "PENDING",
+  "orderTimeStamp": "2023-07-15T17:00:23.056Z"
+}
