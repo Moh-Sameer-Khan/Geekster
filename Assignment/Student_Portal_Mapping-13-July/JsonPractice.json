@@ -1,0 +1,222 @@
+// Below are showing all steps one by one
+
+// ############################# Step -- 1 --> Address Class --> work --> one row add in table
+// Note- Not blank should not be on INteger type otherwise error
+// 1. 
+{
+    "addressLandmark": "secotr-53",
+    "addressZipCode": 2345,
+    "addressDistrict": "Noida",
+    "addressState": "UP",
+    "country": "India"
+}
+// 2..
+{
+    "addressLandmark": "Street-3",
+    "addressZipCode": 245,
+    "addressDistrict": "Hapur",
+    "addressState": "AP",
+    "country": "India"
+}
+// 3.. 
+{
+    "addressLandmark": "Street-4",
+    "addressZipCode": 24995,
+    "addressDistrict": "Amroha",
+    "addressState": "MP",
+    "country": "India"
+  }
+
+//   4..   // check error coming on this 0995 if we passing
+{
+    "addressLandmark": "Street-10",
+    "addressZipCode": 995,
+    "addressDistrict": "Lahore",
+    "addressState": "Lahore",
+    "country": "PAK"
+  }
+
+// ############################# Step -- 2 --> Students Class --> work --> one row add in table
+// 1---
+{
+    "studentName": "Sameer",
+     "studentAge": 20,
+     "studentPhoneNumber": "8077665544",
+     "studentBranch": "CS",
+     "studentDepartment": "MATH",
+   "address": {
+     "addressId": 3
+   }
+}
+
+// 2..
+{
+    "studentName": "Faisal",
+     "studentAge": 22,
+     "studentPhoneNumber": "9077665544",
+     "studentBranch": "CS",
+     "studentDepartment": "HISTORY",
+   "address": {
+     "addressId": 2
+   }
+ }
+
+// 3... 
+{
+    "studentName": "Mukit",
+    "studentAge": 22,
+    "studentPhoneNumber": "7077665544",
+    "studentBranch": "IT",
+    "studentDepartment": "BOTONY",
+  "address": {
+    "addressId": 4
+  }
+}
+
+// 4.. 
+{
+    "studentName": "Saif",
+   "studentAge": 25,
+   "studentPhoneNumber": "9900665544",
+   "studentBranch": "ME",
+   "studentDepartment": "MATH",
+ "address": {
+   "addressId": 1
+ }
+}
+
+// ############################# Step -- 3 --> Students Class --> work -->
+// 1--> Sameer // anything who exist you can passs --> Getting by name
+// 2 --> pass where you want update and what you want update pass(Math, civil)
+// 3 --> pass who dept is exist and delete (math) otherwise else message will come
+
+// ############################# Step -- 4 --> Address Class --> work 
+// 1.. --> pass exist zip code --< work
+// 2 --> pass India and Banglore update
+// 3 --> 1 it will delte when it's not have mapping or FK so carefully
+
+// ############################# Step -- 5 --> Laptop Class --> work --> one row add in table
+// 1..
+{
+    "laptopName": "Asus Note Book",
+    "laptopBrand": "ASUS",
+    "laptopPrice": 50000,
+    "student": {
+      "studentId": 2
+    }
+}
+
+// 2-->
+{
+    "laptopName": "Asus Note",
+    "laptopBrand": "ASUS",
+    "laptopPrice": 509990,
+    "student": {
+      "studentId": 3
+    }
+}
+
+// ############################# Step -- 6 --> Laptop Class --> work --> 
+// 1 --> get by asus list of all laptops
+// 2 --> send brand name and price
+// 3--. Asus and deleted
+
+
+// ############################# Step -- 7 --> Book Class --> work --> one row add in table
+// 1..
+{
+    "bookName": "Mechanics",
+    "bookTitle": "Machine",
+    "bookAuthor": "Raman",
+    "bookDescription": "Heating",
+    "bookPrice": 400,
+    "student": {
+      "studentId": 2
+    }
+}
+
+// 2..
+{
+    "bookName": "Physics",
+    "bookTitle": "Motion",
+    "bookAuthor": "Newton",
+    "bookDescription": "Motion, speed",
+    "bookPrice": 900,
+    "student": {
+      "studentId": 2
+    }
+}
+
+// 3--
+{
+    "bookName": "Math-1",
+    "bookTitle": "Trigonometry",
+    "bookAuthor": "Aggarwal",
+    "bookDescription": "Angles",
+    "bookPrice": 1200,
+    "student": {
+      "studentId": 3
+    }
+}
+
+// ############################# Step -- 8 --> Book Class --> work --> 
+// 1 --> get by book-Author list of all Books(Raman)
+// 2 --> send author name and price -- update
+// 3--. Raman and deleted
+
+// ############################# Step -- 9 --> Course Class --> work --> one row add in table and join  table also
+//  1.. 
+{
+  "courseName": "Engineering",
+  "courseTitle": "Computer Learning",
+  "courseDescription": "To learn languages",
+  "courseDuration": 4,
+  "students": [
+    {
+      "studentId": 2
+    }
+  ]
+}
+
+// 2---
+{
+  "courseName": "Hisotry",
+  "courseTitle": "Past Knowledge",
+  "courseDescription": "To read history",
+  "courseDuration": 7,
+  "students": [
+    {
+      "studentId": 2
+    }
+  ]
+}
+
+// 3.
+{
+  "courseName": "Art",
+  "courseTitle": "Nature Painting",
+  "courseDescription": "Creation and creativity",
+  "courseDuration": 5,
+  "students": [
+    {
+      "studentId": 3
+    }
+  ]
+}
+// 4 ---
+{
+  "courseName": "Bio",
+  "courseTitle": "Body Knowledge",
+  "courseDescription": "To know about body parts",
+  "courseDuration": 4,
+  "students": [
+    {
+      "studentId": 2
+    }
+  ]
+}
+
+// ############################# Step -- 10 --> Course Class --> work --> 
+// 1 --> get by course by id(3) or 78--> null
+// 2 --> send course name and duration -- update
+// 3--. duration 5 (not work)and 16 and deleted (Not working error)
