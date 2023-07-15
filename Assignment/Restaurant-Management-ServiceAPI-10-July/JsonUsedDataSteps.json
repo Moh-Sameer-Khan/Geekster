@@ -1,0 +1,16 @@
+//  Below are showing Step by step using json in this project --
+
+// ############################### Step -- 1-(SIGN_UP)-- User Class --> one row add in user
+
+{
+  "userUserName": "sameer@123",
+  "userPassword": "Sameer@123",
+  "userEmail": "sameer@gmail.com",
+  "userType": "NORMAL_USER"
+}
+//  ##########################  Step -- 2 --SIGN-IN --USer class --> add one row in token class
+// if i will 2 times execute then error bcz one to one mapping
+{
+  "email": "sameer@gmail.com",
+  "password": "Sameer@123"
+}
