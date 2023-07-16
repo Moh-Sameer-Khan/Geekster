@@ -106,7 +106,6 @@ public class UserService {
         }
     }
 
-    @Transactional
     public void updateInstaInformation(User user, SignInInputSession signInInputSession) {
 
         String userUpdateToken = signInInputSession.getTokenValue();
