@@ -1,13 +1,13 @@
-package com.geekster.UserManagementSystemValidation;
+package com.geekster.UserManagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserManagementSystemValidationApplication {
+public class UserManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserManagementSystemValidationApplication.class, args);
+		SpringApplication.run(UserManagementApplication.class, args);
 	}
 
 }

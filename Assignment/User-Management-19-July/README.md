@@ -3,9 +3,9 @@
 ___
 ___
 
-# [**TODO-CRUD**](#heading-ids) 
+# [**User-Management**](#heading-ids) 
 
-> *Below, I'm showing the details related to my TODO-CRUD project like Framework & Language used, Data flow(function used), Data Structure used in my Project and Summary.*
+> *Below, I'm showing the details related to my User-Management project like Framework & Language used, Data flow(function used), Data Structure used in my Project and Summary.*
 
 -  ## [**Framework and Language Used :**](#heading-ids) ##
 ___
@@ -31,24 +31,22 @@ ___
 
 - ## [**Endpoints Used:**](#heading-ids) ##
 ___
-- ### 1. **Controller (TODO):-** ###
-> - **TODO Controller :-**  
-> 1. `POST /todo` - *Create a new Todo in todos list.*
-> 2. `GET /todos` - *Get the all todos list of TODO*
-> 3. `POST /todos/{todoId}` - *Get a particular todo from todolist vai ID*
-> 4. `GET /todo/done` - *Get the all todos list of TODO who is done*
-> 5. `GET /todo/undone` - *Get the all todos list of TODO who is undone*
-> 6. `GET /rooms/counts` - *Get the Total Room in the Hotel*
-> 7. `DELETE /todo` - *Delete the todo from list who exist*
-> 9. `UPDATE /todo/{todoId}/{status}` - *Update the todo information by any id who exist*
+- ### 1. **Controller (User):-** ###
+> - **USer Controller :-**  
+> 1. `POST /users/add` - *Create a List of users at a time*
+> 2. `GET /users` - *Get the all users list*
+> 3. `POST /user/add` - *Create a single user at a time*
+> 4. `GET /users/userId` - *Get the one todo by a particular id*
+> 5. `DELETE /users/{userId}` - *Delete the user from list who exist*
+> 6. `UPDATE /users/{userId}/{emailId}` - *Update the user information by any id who exist*
 
 
 - ### 2. **DataBase Design:-**  ###
 > - **Database Used :-**  *SQL/Hibernate Database using*
 
 
-- ### 3. **Model / Entity(TODO):-** ###
-> - **Annotation Used :-**  *@Data, @NoArgsConstructor, @AllArgsConstructor, @Id, @Column,, @Entity, @GeneratedValue, @Enumerated, @NotBlank, @Min, @Max, @Table*
+- ### 3. **Model / Entity(User):-** ###
+> - **Annotation Used :-**  *@Data, @NoArgsConstructor, @AllArgsConstructor, @Id, @Column,, @Entity, @GeneratedValue, @Enumerated, @NotBlank, @Min, @Max, @Table, @NotNull, @Pattern, @size*
 
 ## [**Data Structure used in my Project**](#heading-ids) ##
 ____
@@ -65,7 +63,7 @@ ____
 
 ## [**Project Summary**](#heading-ids) ##
 ____
-> - **[Aim :-](#heading-ids)** *This is basically good project for learning purpose springBoot basics, Annotation, API, spring mvc and CRUD Operation, crud Repository inbuilt method. In this project i just add Todo, get all Todo a particular todo,  update Todo inforamtion lot of things i learned from this project.*
+> - **[Aim :-](#heading-ids)** *This is basically good project for learning purpose springBoot basics, Annotation,validation,  API, spring mvc and CRUD Operation, crud Repository inbuilt method. In this project i just add User, get all user, a particular user,  update user inforamtion lot of things i learned from this project.*
 
 ## **[👨‍💻 Sameer](#heading-ids)** ##
 ____
@@ -92,7 +90,7 @@ Give a ⭐if this project helped you!
 ___
 Copyright © 2023 [Moh Sameer Khan](#heading-ids).
 
-This project is [TODO-CRUD](https://choosealicense.com/licenses/mit/) licensed.
+This project is [User-Management](https://choosealicense.com/licenses/mit/) licensed.
 
 ___
 *This README was generated with* 🧡 *by [readme-md-generator](https://www.makeareadme.com/)*

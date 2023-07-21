@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.geekster</groupId>
-	<artifactId>User-Management-System-Validation</artifactId>
+	<artifactId>UserManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>User-Management-System-Validation</name>
-	<description>In this Project we will learn Validation and crud and API</description>
+	<name>UserManagement</name>
+	<description>user management to study validations</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
