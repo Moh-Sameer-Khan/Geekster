@@ -1,0 +1,74 @@
+// Here , I will show all steps who I used to run and alll json used 
+
+// ######################### Step -- 1 -- User class--SIGN-UP --Work --> one row add in user
+// 1.. again execute , 2-- email wrong, 3- email = null, 4-md5 -> mdjj , 5-
+{
+    "userFirstName": "Sameer",
+    "userLastName": "Khan",
+    "userAge": 24,
+    "userEmail": "sameer@instauser.com",
+    "userContactNumber": "8057776655",
+    "userPassword": "sameer@123",
+    "gender": "MALE",
+    "accountType": "PUBLIC"
+}
+// 2..one more add
+{
+    "userFirstName": "Faisal",
+    "userLastName": "Rock",
+    "userAge": 25,
+    "userEmail": "faisal@instauser.com",
+    "userContactNumber": "7757776655",
+    "userPassword": "faisal@123",
+    "gender": "MALE",
+    "accountType": "PUBLIC"
+}
+
+// ######################### Step -- 2 -- User class--SIGN-IN --Work --> one row add in token
+// token class not used @NotBlank bcz error coming internal work but exception see
+// 1 ---
+{
+    "userEmail": "sameer@instauser.com",
+    "userPassword": "sameer@123"
+  }
+
+//   2 one more
+{
+    "userEmail": "faisal@instauser.com",
+    "userPassword": "faisal@123"
+}
+
+
+
+// ######################### Step -- 3 -- User class--Update --Work -->update
+// Good Work --> little more practice
+{
+    "userEmail": "sameer@instauser.com",
+    "tokenValue": "" // Pass here token value
+}
+
+// then write this in body
+{
+    "userFirstName": "Same",
+    "userLastName": "Pathan",
+    "userAge": 30,
+    "userEmail": "same@instauser.com",
+    "userContactNumber": "9989998989",
+    "userPassword": "Same@123",
+    "gender": "MALE",
+    "accountType": "PRIVATE"
+}
+
+
+// // ######################### Step -- 4 -- Post class--add post --Work -->added one row in post
+// Request param one by one
+    "userEmail": faisal@instauser.com
+    // and
+    "tokenValue": 964191a5-be4b-4fd6-9534-57042701500b
+// send in Request Body
+{
+    "postContent": "🐕",
+    "postCaption": "My Pet, Tomy!",
+    "postLocation": "Kerala",
+    "postType": "IMAGE"
+}
