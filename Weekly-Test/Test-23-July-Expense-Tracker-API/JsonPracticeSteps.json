@@ -1,0 +1,55 @@
+// Below I/m showing using Steps one by one
+
+// ########################## Step--1 --> SIGN UP --> User class--> work--> one row add in user table
+{
+    "userFirstName": "Sameer",
+    "userLastName": "Khan",
+    "userAge": 23,
+    "userEmail": "sameer@expuser.com",
+    "username": "sameer123",
+    "userPassword": "Sameer@123"
+}
+
+// 2,,---
+{
+    "userFirstName": "Same",
+    "userLastName": "Ali",
+    "userAge": 28,
+    "userEmail": "same@expuser.com",
+    "username": "same123",
+    "userPassword": "Same@123"
+}
+// 3---------
+{
+    "userFirstName": "Faisal",
+    "userLastName": "Khan",
+    "userAge": 26,
+    "userEmail": "faisal@expuser.com",
+    "username": "faisal123",
+    "userPassword": "Faisal@123"
+}
+
+// 4_---
+{
+    "userFirstName": "Saif",
+    "userLastName": "Ali Khan",
+    "userAge": 25,
+    "userEmail": "saif@expuser.com",
+    "username": "saif123",
+    "userPassword": "saif@123"
+}
+
+########################## Step-- 2 --> SIGN IN --> User class--> work--> one row add in token table
+// useremail --> wrong but we are getting by username so its work
+{
+    "userUsername": "same123",
+    "userPassword": "Same@123"
+}
+
+// 2---
+
+{
+    "userUsername": "faisal123",
+    "userPassword": "Faisal@123"
+}
+
