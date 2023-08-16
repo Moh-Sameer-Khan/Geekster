@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sameer Portfolio</title>
+    <link rel="shortcut icon" href="./assets/favicon.jpg" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+    />
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- SplideJs Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.1/dist/css/splide.min.css"
+    />
+    <!-- App Styles -->
+    <link rel="stylesheet" href="/Styling/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="animate__animated animate__slideInDown">
+        <div class="container">
+          <nav class="navigation">
+            <ul>
+              <li><a href="http://ceur-ws.org/Vol-3176/paper5.pdf">Publications</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a class="btn btn--main" href="assets/resume.pdf" download
+              ><i class="bi bi-download"></i>Resume</a
+            >
+          </nav>
+
+          <h1 class="header__logo">
+            <a href="/">
+              <span>Moh Sameer</span>
+              <span>Khan</span>
+            </a>
+          </h1>
+
+          <div class="header__contact">
+            <a href="mailto:pramodkumar912894@gmail.com">mskhanm1819@gmail.com</a>
+            <a class="btn btn--light" href="/UsePics/MohSameerKhanResume.pdf" download>
+              <i class="bi bi-download"></i> Resume
+            </a>
+          </div>
+
+          <div class="header__mobile">
+            <button id="navigation-button">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__wrapper">
+          <div class="hero__img">
+            <img src="/UsePics/profilePic.png" alt="Profile Picture" />
+          </div>
+          <h1 class="hero__title animate__animated animate__slideInUp">
+            Junior Software<br />
+            Developer
+          </h1>
+          <p class="hero__content animate__animated animate__slideInUp">
+            Moh Sameer Khan, a self-taught programmer, Competetive coder and Team Worker.
+          </p>
+          <ul class="social animate__animated animate__slideInLeft">
+            <li>
+              <a href="https://www.linkedin.com/in/moh-sameer-khan-b31586208/"><i class="bi bi-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/Moh-Sameer-Khan"><i class="bi bi-github"></i></a>
+            </li>
+            <li>
+              <a href="https://leetcode.com/mskhanm1819/"><span class="iconify" data-icon="simple-icons:leetcode"></span></a>
+            </li>
+<!--            <li>-->
+<!--              <a href="https://leetcode.com/pramod-kum/"><span class="iconify" data-icon="simple-icons:codechef"></span></a>-->
+<!--            </li>-->
+            <li>
+              <a href="https://twitter.com/Sameerr1819"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section
+    <section class="section animate__animated animate__slideInUp" id="portfolio">
+      <div class="container">
+        <div class="section__header section__header">
+          <h2 class="section__title">Portfolio</h2>
+          <p class="section__subtitle">See my latest work</p>
+        </div>
+        <div class="portfolio">
+          <div class="portfolio__box">
+            <img class="portfolio__img" src="assets/p1.jpg" alt="Portfolio Items" />
+            <div class="portfolio__info">
+              <h3 class="portfolio__title">Covid-19 Detection using X-ray</h3>
+              <p class="portfolio__content">
+                Research oriented, open source Deep Learning Application which is used to diagnose Covid-19 among patients using X-rays and predict the HeatMap around the region of Potential swelling.
+              </p>
+              <a class="portfolio__link" href="https://share.streamlit.io/pramod-kum/app/main/Untitled-1.py">
+                <i class="bi bi-arrow-up-right-circle-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__box">
+            <img class="portfolio__img" src="https://code-projects.org/wp-content/uploads/2020/11/Screenshot-from-2020-11-05-19-43-44.png" alt="Portfolio Items" />
+            <div class="portfolio__info">
+              <h3 class="portfolio__title">Quiz Application using Django</h3>
+              <p class="portfolio__content">
+                A Quiz application build on the top of Django REST API in collaboration with IT coders where users can play quiz in real time environment. It includes socket programming client server architecture and browser management.
+              </p>
+              <a class="portfolio__link" href="https://github.com/ishn123/QuizApp">
+                <i class="bi bi-arrow-up-right-circle-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__box">
+            <img class="portfolio__img" src="assets/portfolio-02.jpg" alt="Portfolio Items" />
+            <div class="portfolio__info">
+              <h3 class="portfolio__title">Banking System</h3>
+              <p class="portfolio__content">
+                A Java Enterprise Application (JEEE) which is build using JSP and abstract window toolkit (AWT) providing a basic functionality of banking like credit-debit to users with transaction consistency.
+              </p>
+              <a class="portfolio__link" href="https://github.com/ishn123/BankingSys">
+                <i class="bi bi-arrow-up-right-circle-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__box">
+            <img class="portfolio__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mona_lisa_the_starry_night_o_lbfgs_i_content_h_720_m_vgg19_cw_100000.0_sw_30000.0_tv_1.0.jpg/220px-Mona_lisa_the_starry_night_o_lbfgs_i_content_h_720_m_vgg19_cw_100000.0_sw_30000.0_tv_1.0.jpg" alt="Portfolio Items" />
+            <div class="portfolio__info">
+              <h3 class="portfolio__title">Neural Style Transfer</h3>
+              <p class="portfolio__content">
+                A Deep Learning model is which to transfer style from one image to another trained on top of VGG-16 and customized loss function using pytorch and numpy and OpenCV.
+              <a class="portfolio__link" href="https://github.com/ishn123/Neural-Style-Transfer">
+                <i class="bi bi-arrow-up-right-circle-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="section__footer">
+          <a href="#contact">
+            Ask for More Projects
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- About Me Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">About</h2>
+          <p class="section__subtitle">Few things about me</p>
+        </div>
+        <div class="about">
+          <h3 class="about__intro">👋 Hi, I'm Moh Sameer Khan</h3>
+          <p class="about__bio">
+            Junior Software developer proficient in Java, Spring Boot, and SQL. Skilled in designing and implementing complex systems, debugging, and problem-solving. Passionate about developing clean and efficient code and constantly expanding my knowledge of new technologies.Done number of projects on Java and Spring Boot.Have hands on experience on tools such as IntelliJ, VSCode, AWS, Postman, Eclipse, Git, Swagger, etc.
+          </p>
+          <a class="about__link" href="#contact">Contact Me<i class="bi bi-arrow-right"></i></a>
+
+          <h4 class="about__skillsTitle">Skills</h4>
+          <ul class="about__skillsList">
+
+            <li class="btn btn--light">Java</li>
+            <li class="btn btn--light">Data Structures</li>
+            <li class="btn btn--light">OOPs</li>
+            <li class="btn btn--light">SQL</li>
+            <li class="btn btn--light">Spring boot</li>
+            <li class="btn btn--light">Maven</li>
+            <li class="btn btn--light">REST API</li>
+            <li class="btn btn--light">Git</li>
+            <li class="btn btn--light">HTML</li>
+            <li class="btn btn--light">CSS</li>
+            <li class="btn btn--light">JavaScript</li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container">
+      <div class="section" id="testimonials">
+        <div class="section__header section__header--center">
+          <h2 class="section__title">People Says</h2>
+          <p class="section__subtitle">What others think about me</p>
+        </div>
+        <div class="testimonials">
+          <div class="splide">
+            <div class="splide__track">
+              <div class="splide__list">
+                <div class="testimonials__box splide__slide">
+                  <span class="testimonials__sign">
+                    <i class="bi bi-chat-square-quote"></i>
+                  </span>
+                  <p class="testimonials__quotes">
+                    Can-do Attitude : Good job on completing the tasks on time
+                  </p>
+                  <div class="testimonials__author">
+                    <div class="testimonials__authorInfo">
+                      <h4>Moh ShahMukit Alam</h4>
+                      <p>Senior Software Engineer - II at Nissan Digital Corporation</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__box splide__slide">
+                  <span class="testimonials__sign">
+                    <i class="bi bi-chat-square-quote"></i>
+                  </span>
+                  <p class="testimonials__quotes">
+                    Oustanding performance on all projects by leading 1st on scorecard.
+                  </p>
+                  <div class="testimonials__author">
+                    <div class="testimonials__authorInfo">
+                      <h4>Kamal Aggarwal</h4>
+                      <p>Senior Software Developer at  Amazon</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__box splide__slide">
+                  <span class="testimonials__sign">
+                    <i class="bi bi-chat-square-quote"></i>
+                  </span>
+                  <p class="testimonials__quotes">
+                    Outstanding mentoring and assistance done at Geekster.
+                  </p>
+                  <div class="testimonials__author">
+                    <div class="testimonials__authorInfo">
+                      <h4>Bittu Aggarwal</h4>
+                      <p>Academic Head and Counsellor at Geekster</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="section__header section__header--center">
+        <h2 class="section__title">Contact Me</h2>
+        <p class="section__subtitle">Reach out to me, 24/7</p>
+      </div>
+      <div class="container">
+        <div class="contact">
+          <div class="contact__info">
+            <p>Call Me: <a href="tel:+91 8057764459"> (+91) 8057764459</a></p>
+          </div>
+
+          <form class="contact__form" id="my-form" method="post">
+            <div class="contact__fields">
+              <label for="name">Name</label>
+              <input type="name" name="name" id="name" placeholder="Your Name" />
+            </div>
+            <div class="contact__fields">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Email Address" />
+            </div>
+            <div class="contact__fields">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Write Message..."></textarea>
+            </div>
+            <div class="contact__fields contact__fields--action">
+              <button class="btn btn--accent" type="submit">
+                Send Message <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__copyright">
+          <p>Made with &hearts; by <a href="https://github.com/Moh-Sameer-Khan">Moh-Sameer-Khan.io</a></p>
+        </div>
+        <div class="footer__social">
+          <ul class="social">
+            <li>
+              <a href="https://www.linkedin.com/in/moh-sameer-khan-b31586208/"><i class="bi bi-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/Moh-Sameer-Khan"><i class="bi bi-github"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Sameerr1819"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SplideJs v3 -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.1/dist/js/splide.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- App Scripts -->
+    <script src="/JavaScript/app.js"></script>
+    <script src="/JavaScript/data.js"></script>
+  </body>
+</html>
+
